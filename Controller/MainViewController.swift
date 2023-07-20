@@ -129,7 +129,7 @@ class MainViewController: UIViewController {
             userInput.text = nnail
             messageInput.text = nnail
             
-            //            fetchData()
+            fetchData()
             tabelview.reloadData()
             return rightbool = false
         }
@@ -146,13 +146,13 @@ class MainViewController: UIViewController {
                 if action.title == names[0] {
                     
                     self.iteamTabel.sort(by: { m1, m2 in
-                        m1.timeStamp < m2.timeStamp
+                        m1.timeStamp > m2.timeStamp
                     })
                     self.tabelview.reloadData()
                     return sortbybool = true
                 } else {
                     self.iteamTabel.sort(by: { m1, m2 in
-                        m1.timeStamp > m2.timeStamp
+                        m1.timeStamp < m2.timeStamp
                     })
                     self.tabelview.reloadData()
                     return sortbybool = false
